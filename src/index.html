@@ -24,6 +24,10 @@
         })();
     </script>
 
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Email Form Script -->
     <script type="text/javascript">
         const toggleFormState = (el) => {
 
@@ -51,7 +55,6 @@
                     document.querySelector('#loader').style.display = 'none';
                     toggleFormState(el);
 
-                    console.log('SUCCESS!');
                     const _snackBar = document.querySelector('#snackbar');
                     _snackBar.innerHTML = 'Message sent succesfully...';
                     _snackBar.className = 'show';
@@ -63,8 +66,6 @@
                     el.reset();
                 }, (error) => {
                     toggleFormState(el);
-
-                    console.log('FAILED...', error);
                     _snackBar.innerHTML = 'Some error occured...';
 
                 });
@@ -99,7 +100,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <!-- <li><a href="#testimonial">Testimonials</a></li> -->
-                <li><a href="#services">Services</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Have a coffee</a></li>
             </ul>
 
@@ -122,25 +124,29 @@
                 <div class="content">
                     <div class="contentbx w50">
                         <h3>I'm a Full Stack Developer.</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fugiat deserunt dolore,
-                            doloremque tempore quos hic, veniam nulla, voluptates sit enim fugit ex ea? Asperiores
-                            eligendi
-                            eos
-                            et quis! Vel dolorum esse voluptatum rerum.
-                            tempore quos hic, veniam nulla, voluptates sit enim fugit ex ea? Asperiores eligendi eos et
-                            quis!
-                            Vel dolorum esse voluptatum rerum.<br><br>Lorem ipsum dolor sit amet, consectetur
-                            adipisicing
-                            elit.
-                            Officia incidunt vel quis dignissimos iste, sunt eveniet, consectetur sit expedita beatae
-                            commodi
-                            quas sapiente sint, maxime officiis optio. Voluptatum suscipit harum saepe, vitae excepturi
-                            assumenda consectetur sit expedita beatae commodi quas sapiente sint, maxime officiis optio.
-                            Voluptatum suscipit harum saepe, vitae excepturi assumenda vitae excepturi assumenda
-                            consectetur
-                            sit
-                            expedita beatae commod quas sapiente sint, maxime officiis optio. Voluptatum suscipit harum
-                            saepe.
+                        <p>I am a resolute engineer displaying great leadership qualities. I have been acknowledged for
+                            my commitment, problem-solving approach, and passion for programming in my professional term
+                            as a software engineer. I am interested in utilizing my technical background, in order to
+                            work in Software engineer roles.
+                            <br>
+                            <br>
+                            I have a demonstrated history of working in the information technology and services
+                            industry. Skilled in Python, SQL, Bootstrap, Cascading Style Sheets (CSS), Angular JS,
+                            Python, and C#.net. Strong engineering professional with an interest to explore new
+                            technologies.
+                            <br>
+                            <br>
+                            Technical Skills:
+                            <br>
+                            • Languages: C#.net, JavaScript, TypeScript, Python, Django, HTML, CSS, JSON, Bootstrap,
+                            Linux
+                            <br>
+                            • Frameworks: jQuery, Angular, React.js, REST, PyTest
+                            <br>
+                            • Database: MySQL, Microsoft SQL Server, Oracle
+                            <br>
+                            • Tools: GIT, Slack
+                            <br>
                         </p>
                     </div>
                     <div class="w50">
@@ -150,7 +156,7 @@
             </section>
         </div>
 
-        <section class="services" id="services">
+        <!-- <section class="services" id="services">
             <div class="heading white">
                 <h2>Services that I Provide</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -205,13 +211,64 @@
                         Doloribus, provident.</p>
                 </div>
             </div>
+        </section> -->
+
+        <section class="skills" id="skills">
+            <div class="heading white">
+                <h2>Skills that I possess</h2>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+            </div>
+            <div class="content">
+                <div class="skills-main">
+                    <div class="skills-progress">
+                        <div class="skills-title">
+                            <h3>web design</h3>
+                        </div>
+                        <div class="skills-barline">
+                            <div class="skills-countbar" data-percentNumber="90"></div>
+                        </div>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="skills-title">
+                            <h3>web developer</h3>
+                        </div>
+                        <div class="skills-barline">
+                            <div class="skills-countbar" data-percentNumber="40"></div>
+                        </div>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="skills-title">
+                            <h3>graphice design</h3>
+                        </div>
+                        <div class="skills-barline">
+                            <div class="skills-countbar" data-percentNumber="65"></div>
+                        </div>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="skills-title">
+                            <h3>digital marketing</h3>
+                        </div>
+                        <div class="skills-barline">
+                            <div class="skills-countbar" data-percentNumber="80"></div>
+                        </div>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="skills-title">
+                            <h3>javarscript</h3>
+                        </div>
+                        <div class="skills-barline">
+                            <div class="skills-countbar" data-percentNumber="20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <div class="container">
             <section class="work" id="work">
-                <div class="heading white">
+                <div class="heading">
                     <h2>My Work</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Some of the projects that I worked on...</p>
                 </div>
                 <div class="content">
                     <div class="workBx">
@@ -408,6 +465,8 @@
 
         <!-- The actual snackbar -->
         <div id="snackbar"></div>
+
+        <script src="./scripts/skills.js"></script>
 
 </body>
 

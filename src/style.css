@@ -386,8 +386,8 @@ body::-webkit-scrollbar-thumb {
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
+  background-color: #fff; /* Black background color */
+  color: #333; /* White text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
@@ -449,4 +449,69 @@ body::-webkit-scrollbar-thumb {
     bottom: 0;
     opacity: 0;
   }
+}
+
+section.skills {
+  background: #111;
+  color: #fff;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+}
+
+.skills-main {
+  width: 50%;
+  margin: 0 auto;
+}
+.skills-progress {
+  margin: 25px 0;
+}
+.skills-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.skills-title h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.skills-barline {
+  height: 12px;
+  background: #c8d6e5;
+  border-radius: 20px;
+}
+
+.skills-countbar {
+  height: 12px;
+  background: #233eb4;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+}
+.skills-countbar h3 {
+  position: absolute;
+  right: -19px;
+  top: -35px;
+  background: #111;
+  padding: 4px 6px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+.skills-countbar h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  background: #aaaaab;
+  transform: rotate(45deg) translateX(-60%);
+}
+
+.white {
+  color: white;
 }
